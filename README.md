@@ -55,4 +55,8 @@ sudo systemctl status nextcloud-container.service
 
 ### 1. Change permission to 0770 error
 
- If you get error to change permission to 0770 on creating an admin account set the `check_data_directory_permissions` boolean to `false` in the `config/config.php` files inside the nextcloud-app container.
+If you get error to change permission to 0770 on creating an admin account attach shell to the nextcloud-app container and add the following to the end of the `config/config.php` file.
+
+```
+  'check_data_directory_permissions' => false,
+```
