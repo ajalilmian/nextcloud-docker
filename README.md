@@ -8,6 +8,20 @@ Clone repository on your server and edit the necessory variables in the `docker-
 docker compose up -d
 ```
 
+## Using the Nextcloud command-line interface
+
+To use the [Nextcloud command-line interface](https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/occ_command.html) (aka. occ command):
+
+```bash
+docker exec --user www-data CONTAINER_ID php occ
+```
+
+or for docker-compose:
+
+```bash
+docker-compose exec --user www-data CONTAINER_ID php occ
+```
+
 ## Start on boot
 
 To start container on boot make sure you have enabled docker service to start automatically
