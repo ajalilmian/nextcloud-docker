@@ -1,4 +1,4 @@
-# docker-nextcloud
+# nextcloud-docker
 
 ## How to use
 
